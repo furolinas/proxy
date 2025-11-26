@@ -3,8 +3,11 @@ services:
     image: ghcr.io/fatedier/frps:v0.65.0
     container_name: frps
     restart: unless-stopped
+    environment:
+      - FRP_TOKEN=${FRP_TOKEN}
+    command: [ "-c", "./frps.toml" ]
     ports:
       - "7000:7000"
       - "25565:25565"
     volumes:
-      - ./frps.toml:./frps.toml
+      - ./frps.toml:/frps.toml:ro
