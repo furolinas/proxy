@@ -1,0 +1,6 @@
+auth.token = {{ .Envs.FRP_TOKEN }}
+bindAddr = "0.0.0.0"
+bindPort = 7000
+log.to = "./frps.log"
+log.level = "info"
+auth.method = "token"

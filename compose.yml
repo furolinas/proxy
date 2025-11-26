@@ -1,0 +1,10 @@
+services:
+  frps:
+    image: ghcr.io/fatedier/frps:v0.65.0
+    container_name: frps
+    restart: unless-stopped
+    ports:
+      - "7000:7000"
+      - "25565:25565"
+    volumes:
+      - ./frps.toml:./frps.toml
