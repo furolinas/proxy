@@ -9,6 +9,7 @@ services:
     ports:
       - "7000:7000"
       - "25565:25565"
+      - "25566:25566"
     volumes:
       - ./frps.toml:/frps.toml:ro
       - ./logs:/logs
